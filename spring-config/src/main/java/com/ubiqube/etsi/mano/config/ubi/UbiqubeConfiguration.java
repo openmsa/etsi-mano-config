@@ -28,7 +28,7 @@
  * containing Woodstox, in file "ASL2.0", under the same directory
  * as this file.
  */
-package com.ubiqube.etsi.mano.config;
+package com.ubiqube.etsi.mano.config.ubi;
 
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
