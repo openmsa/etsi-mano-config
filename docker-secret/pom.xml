@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.ubiqube.mano</groupId>
 		<artifactId>mano-config-aggregator</artifactId>
-		<version>3.0.0</version>
+		<version>3.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>mano-docker-secret</artifactId>
 	<description>Configuration thru swarm secret API</description>
