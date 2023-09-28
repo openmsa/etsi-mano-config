@@ -16,6 +16,8 @@
  */
 package com.ubiqube.etsi.mano.config.properties;
 
+import java.net.URI;
+
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
@@ -28,7 +30,7 @@ import lombok.Setter;
 @ConfigurationProperties(prefix = "mano")
 public class ManoProperties {
 
-	private String frontendUrl;
+	private URI frontendUrl;
 
-	private String swaggerOAuth2;
+	private URI swaggerOAuth2;
 }

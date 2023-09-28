@@ -18,6 +18,8 @@ package com.ubiqube.etsi.mano.config.properties;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.net.URI;
+
 import org.junit.jupiter.api.Test;
 
 class ManoPropertiesTest {
@@ -25,8 +27,8 @@ class ManoPropertiesTest {
 	@Test
 	void test() {
 		final ManoProperties props = new ManoProperties();
-		props.setFrontendUrl("fe");
-		props.setSwaggerOAuth2("oauth2");
+		props.setFrontendUrl(URI.create("http://fe/"));
+		props.setSwaggerOAuth2(URI.create("http://oauth2/"));
 		assertEquals("fe", props.getFrontendUrl());
 		assertEquals("oauth2", props.getSwaggerOAuth2());
 	}
