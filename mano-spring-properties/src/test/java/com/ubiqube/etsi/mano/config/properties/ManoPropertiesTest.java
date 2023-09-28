@@ -29,8 +29,8 @@ class ManoPropertiesTest {
 		final ManoProperties props = new ManoProperties();
 		props.setFrontendUrl(URI.create("http://fe/"));
 		props.setSwaggerOAuth2(URI.create("http://oauth2/"));
-		assertEquals("fe", props.getFrontendUrl());
-		assertEquals("oauth2", props.getSwaggerOAuth2());
+		assertEquals(URI.create("http://fe/"), props.getFrontendUrl());
+		assertEquals(URI.create("http://oauth2/"), props.getSwaggerOAuth2());
 	}
 
 }
