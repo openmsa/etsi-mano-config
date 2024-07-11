@@ -9,7 +9,7 @@
 	<artifactId>mano-docker-secret</artifactId>
 	<description>Configuration thru swarm secret API</description>
 	<properties>
-		<spring-cloud.version>2023.0.2</spring-cloud.version>
+		<spring-cloud.version>2023.0.3</spring-cloud.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
