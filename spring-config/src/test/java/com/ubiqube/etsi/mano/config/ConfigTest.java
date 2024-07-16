@@ -39,7 +39,7 @@ class ConfigTest {
 	private Environment env;
 
 	@Test
-	void testNotAPath() throws Exception {
+	void testNotAPath() {
 		final UbiqubeSourceLocator dsl = new UbiqubeSourceLocator();
 		when(env.getProperty("mano.config.folder", File.class)).thenReturn(new File("src:-('é&"));
 		when(env.getProperty("mano.config.type", String.class)).thenReturn("applicationBAD");
@@ -49,7 +49,7 @@ class ConfigTest {
 	}
 
 	@Test
-	void testNameBadFolder() throws Exception {
+	void testNameBadFolder() {
 		final UbiqubeSourceLocator dsl = new UbiqubeSourceLocator();
 		when(env.getProperty("mano.config.folder", File.class)).thenReturn(new File("src/test/resources/applicationBAD"));
 		when(env.getProperty("mano.config.type", String.class)).thenReturn("applicationBAD");
@@ -59,7 +59,7 @@ class ConfigTest {
 	}
 
 	@Test
-	void testNameBadBundle() throws Exception {
+	void testNameBadBundle() {
 		final UbiqubeSourceLocator dsl = new UbiqubeSourceLocator();
 		when(env.getProperty("mano.config.folder", File.class)).thenReturn(new File("src/test/resources/"));
 		when(env.getProperty("mano.config.type", String.class)).thenReturn("applicationBAD");
@@ -68,16 +68,7 @@ class ConfigTest {
 	}
 
 	@Test
-	void testName3() throws Exception {
-		final UbiqubeSourceLocator dsl = new UbiqubeSourceLocator();
-		when(env.getProperty("mano.config.folder", File.class)).thenReturn(new File("src/test/resources/"));
-		when(env.getProperty("mano.config.type", String.class)).thenReturn("applicationBAD");
-		dsl.locate(env);
-		assertTrue(true);
-	}
-
-	@Test
-	void testNameOk() throws Exception {
+	void testNameOk() {
 		final UbiqubeSourceLocator dsl = new UbiqubeSourceLocator();
 		when(env.getProperty("mano.config.folder", File.class)).thenReturn(new File("src/test/resources/secrets"));
 		when(env.getProperty("mano.config.type", String.class)).thenReturn("vnfm");
@@ -93,7 +84,7 @@ class ConfigTest {
 	}
 
 	@Test
-	void testNfvo() throws Exception {
+	void testNfvo() {
 		final UbiqubeSourceLocator dsl = new UbiqubeSourceLocator();
 		when(env.getProperty("mano.config.folder", File.class)).thenReturn(new File("src/test/resources/secrets"));
 		when(env.getProperty("mano.config.type", String.class)).thenReturn("nfvo");

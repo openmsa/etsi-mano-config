@@ -20,6 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+@SuppressWarnings("static-method")
 class ManoRepositoryPropertiesTest {
 
 	@Test
@@ -30,7 +31,7 @@ class ManoRepositoryPropertiesTest {
 	}
 
 	@Test
-	void testName() throws Exception {
+	void testName() {
 		final ManoRepositoryProperties props = new ManoRepositoryProperties("phys");
 		assertEquals("phys", props.getPhysRoot());
 	}
