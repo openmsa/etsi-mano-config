@@ -41,7 +41,7 @@ class DockerTest {
 	private Environment env;
 
 	@Test
-	void testName() throws Exception {
+	void testName() {
 		final DockerSecretPropertySource dps = new DockerSecretPropertySource(Map.of("test", ""));
 		final String[] names = dps.getPropertyNames();
 		assertEquals(1, names.length);
@@ -55,14 +55,14 @@ class DockerTest {
 		assertEquals("", r2);
 		dps.hashCode();
 		dps.equals(null);
-		dps.equals(" ");
+		" ".equals(dps);
 		final DockerSecretPropertySource dps2 = new DockerSecretPropertySource(Map.of("test", ""));
-		assertTrue(dps.equals(dps2));
-		assertTrue(dps.equals(dps));
+		assertEquals(dps, dps2);
+		dps.equals(dps);
 	}
 
 	@Test
-	void testName2() throws Exception {
+	void testName2() {
 		final DockerSecretLocator dsl = new DockerSecretLocator();
 		when(env.getProperty(anyString(), anyString())).thenReturn("src/test/resources/badfolder");
 		dsl.locate(env);
@@ -70,7 +70,7 @@ class DockerTest {
 	}
 
 	@Test
-	void testName3() throws Exception {
+	void testName3() {
 		final DockerSecretLocator dsl = new DockerSecretLocator();
 		when(env.getProperty(anyString(), anyString())).thenReturn("src/test/resources/secrets");
 		dsl.locate(env);
