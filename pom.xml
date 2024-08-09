@@ -16,7 +16,7 @@
 		<module>mano-spring-properties</module>
 	</modules>
 	<scm>
-		<developerConnection>scm:git:https://github.com/openmsa/etsi-mano-config.git</developerConnection>
+		<developerConnection>scm:git:ssh://git@github.com/openmsa/etsi-mano-config.git</developerConnection>
 		<tag>HEAD</tag>
   </scm>
 </project>
