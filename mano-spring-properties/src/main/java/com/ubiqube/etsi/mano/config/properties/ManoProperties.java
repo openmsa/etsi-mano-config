@@ -38,7 +38,7 @@ public class ManoProperties {
 
 	@Getter
 	@Setter
-	class Config {
+	public class Config {
 		/**
 		 * Type of installation, or given name. This value is used for Queues and topics
 		 * name.
