@@ -33,4 +33,16 @@ public class ManoProperties {
 	private URI frontendUrl;
 
 	private URI swaggerOAuth2;
+
+	private Config config;
+
+	@Getter
+	@Setter
+	class Config {
+		/**
+		 * Type of installation, or given name. This value is used for Queues and topics
+		 * name.
+		 */
+		private String type;
+	}
 }
