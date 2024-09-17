@@ -34,15 +34,6 @@ public class ManoProperties {
 
 	private URI swaggerOAuth2;
 
-	private Config config;
+	private ManoConfig config;
 
-	@Getter
-	@Setter
-	public class Config {
-		/**
-		 * Type of installation, or given name. This value is used for Queues and topics
-		 * name.
-		 */
-		private String type;
-	}
 }
