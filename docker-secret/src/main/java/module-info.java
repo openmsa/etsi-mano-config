@@ -18,6 +18,7 @@ module com.ubiqube.etsi.mano.config.docker {
 	exports com.ubiqube.etsi.mano.config.docker;
 
 	requires org.slf4j;
+	requires org.jspecify;
 	requires jakarta.annotation;
 	requires transitive spring.core;
 	requires spring.jcl;

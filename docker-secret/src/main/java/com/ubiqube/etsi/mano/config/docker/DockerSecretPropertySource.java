@@ -21,7 +21,7 @@ import java.util.Objects;
 
 import org.springframework.core.env.EnumerablePropertySource;
 
-import jakarta.annotation.Nullable;
+import org.jspecify.annotations.Nullable;
 
 public class DockerSecretPropertySource extends EnumerablePropertySource<Map<String, Object>> {
 
