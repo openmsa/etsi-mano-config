@@ -20,10 +20,10 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.env.EnumerablePropertySource;
-import org.springframework.lang.Nullable;
 
 public class UbiqubePropertySource extends EnumerablePropertySource<Map<String, Object>> {
 
