@@ -23,4 +23,8 @@ module com.ubiqube.etsi.mano.config.ubi {
 	requires spring.core;
 	requires spring.boot;
 	requires transitive spring.cloud.context;
+	/**
+	 * Because of {@link PropertySource}
+	 */
+	requires org.apache.commons.logging;
 }
